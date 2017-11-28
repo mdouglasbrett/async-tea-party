@@ -4,6 +4,7 @@
 
 (def google-tea-service-chan (async/chan 10))
 (def bing-tea-service-chan (async/chan 10))
+(def result-chan (async/chan 10))
 
 (defn random-add []
   (reduce + (conj [] (repeat (rand-int 100000) 1))))
